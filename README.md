@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laragon</title>
+        <title>Raaf's Profile</title>
 
         <link href="https://fonts.googleapis.com/css?family=Karla:400" rel="stylesheet" type="text/css">
 
@@ -61,16 +61,13 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title" title="Laragon">Laragon</div>
+                <div class="title">Raaf's Profile</div>
      
                 <div class="info"><br />
                       <?php print($_SERVER['SERVER_SOFTWARE']); ?><br />
                       PHP version: <?php print phpversion(); ?>   <span><a title="phpinfo()" href="/?q=info">info</a></span><br />
                       Document Root: <?php print ($_SERVER['DOCUMENT_ROOT']); ?><br />
 
-                </div>
-                <div class="opt">
-                  <div><a title="Getting Started" href="https://laragon.org/docs">Getting Started</a></div>
                 </div>
             </div>
 
