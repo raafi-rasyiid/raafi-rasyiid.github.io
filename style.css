@@ -1,0 +1,235 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-web-title{
+  font-size: 22pt;
+  font-weight: 700;
+  padding: 7% 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url('/assets/img/head-bckgrnd.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+
+.sidebar h2 {
+  font-size: 22pt;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 14pt;
+}
+
+
+.sidebar nav ul li a img {
+  margin-right: 10px;
+  background-color: aliceblue;
+  border-radius: 8px;
+}
+
+.sidebar nav ul li a.active-link {
+  font-weight: bold;
+  color: #00bcd4;
+}
+/* 
+.about-section{
+} */
+/* .sidebar .dark nav ul li a {
+  color: #000;
+  text-decoration: none;
+} */
+
+.sidebar nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.theme-toggle {
+  margin-top: 20px;
+  padding: 8px 12px;
+  background: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.theme-toggle:hover {
+  background: #666;
+}
+
+
+.hijri-date {
+  font-size: 0.8em;
+  color: #ccc;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: #f4f4f4;
+  overflow-y: auto;
+  font-size: 0.95em;
+  text-align: justify;
+}
+
+.page {
+  display: none;
+}
+
+/* animated page */
+/* .page.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+} */
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.page.active {
+  display: block;
+  animation: slideIn 0.4s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* animated page in contact */
+.about-contact {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.box {
+  flex: 1 1 45%;
+  padding: 20px;
+  background-color: #aaa;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(0);
+  animation-fill-mode: forwards;
+}
+
+/* animation for left-box (fade down) */
+.aboutMe-box {
+  animation: fadeDown 0.6s ease forwards;
+  animation-delay: 0.2s;
+  background-color: #708090;
+  width: 50%;
+  float: left;
+  text-align: left;
+}
+
+/* animation for right-box (fade up) */
+.contactMe-box {
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+  background-color: #2F4F4F;
+  width: 50%;
+  margin-top: 1%;
+  float: right;
+  text-align: left;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* to change theme */
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark .sidebar {
+  background-color: #696969;
+  color: #000;
+}
+
+body.dark .content {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.date-container {
+  font-size: 0.8em;
+  color: #ccc;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  line-height: 1.5;
+}
