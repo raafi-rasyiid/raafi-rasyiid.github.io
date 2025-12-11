@@ -10,13 +10,13 @@ body {
   display: flex;
   height: 100vh;
   overflow: hidden;
-  width:100%;
 }
 
 .container-satu {
   display: flex;
   height: 100vh;
   overflow: hidden;
+  width: 100%;
 }
 
 .sidebar {
