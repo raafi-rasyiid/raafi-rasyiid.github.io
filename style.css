@@ -34,7 +34,7 @@ body {
   font-weight: 700;
   padding: 7% 0;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url('/assets/img/Raafi' Rasyiid.png');
+  url('/assets/img/raafi-rasyiid.png');
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -73,9 +73,10 @@ body {
   font-weight: bold;
   color: #00bcd4;
 }
-/* 
-.about-section{
+ 
+/* .about-section{
 } */
+
 /* .sidebar .dark nav ul li a {
   color: #000;
   text-decoration: none;
