@@ -1,178 +1,35 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Portofolio - Trusted Tech</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* PALET WARNA TRUSTED TECH */
-        :root {
-            --bg-dark: #0D1B2A;       /* Deep Dark Navy */
-            --navy-main: #1B263B;     /* Navy Blue */
-            --slate: #415A77;         /* Slate Gray */
-            --cyan-accent: #00B4D8;   /* Cyan Accent */
-            --white: #E0E1DD;         /* Off White */
-            --text-gray: #A0A0A0;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* HEADER */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            background: rgba(13, 27, 42, 0.9);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-        }
-        .logo { font-weight: 700; font-size: 1.5rem; color: var(--cyan-accent); }
-        nav a { margin: 0 15px; text-decoration: none; color: var(--white); font-size: 0.9rem; }
-        .btn-login { background: var(--cyan-accent); color: var(--bg-dark); padding: 8px 20px; border-radius: 20px; font-weight: bold; }
-
-        /* HERO SECTION */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 120px 8% 60px;
-            min-height: 80vh;
-        }
-        .hero-text h1 { font-size: 4.5rem; margin-bottom: 10px; line-height: 1;}
-        .hero-text span { color: var(--cyan-accent); }
-        .hero-text p { color: var(--text-gray); max-width: 500px; margin-bottom: 20px; }
-        .hero-img { width: 400px; filter: drop-shadow(0 0 20px var(--cyan-accent)); }
-
-        /* SKILLS SECTION */
-        .skills-container {
-            display: flex;
-            gap: 50px;
-            padding: 60px 8%;
-            align-items: center;
-        }
-        .profile-card {
-            background: var(--navy-main);
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid var(--slate);
-        }
-        .profile-img { width: 120px; border-radius: 15px; margin-bottom: 15px; }
-
-        .skill-bars { flex-grow: 1; }
-        .bar-item { margin-bottom: 15px; }
-        .bar-label { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.8rem; }
-        .bar-bg { background: var(--slate); height: 10px; border-radius: 5px; }
-        .bar-fill { 
-            background: linear-gradient(90deg, var(--slate), var(--cyan-accent)); 
-            height: 100%; border-radius: 5px; 
-            transition: width 1s ease-in-out;
-        }
-
-        /* CARDS SECTION */
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 40px 8%;
-        }
-        .card {
-            background: var(--navy-main);
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            border-bottom: 3px solid transparent;
-            transition: 0.3s;
-        }
-        .card:hover { border-bottom: 3px solid var(--cyan-accent); transform: translateY(-10px); }
-        .card i { font-size: 2rem; color: var(--cyan-accent); margin-bottom: 15px; display: block; }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .hero, .skills-container { flex-direction: column; text-align: center; }
-            .hero-text h1 { font-size: 2.5rem; }
-            .hero-img { width: 250px; margin-top: 30px; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo">A. Dev</div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Skills</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
-        </nav>
-        <a href="#" class="btn-login">LOGIN</a>
-    </header>
-
-    <section class="hero">
-        <div class="hero-text">
-            <h1><span>Raafi'</span><br>Rasyiid</h1>
-            <p>Spesialis WordPress Developer & Data Management dengan pengalaman di bidang IT Staff dan Sekretariat. Menggabungkan ketelitian data dengan keahlian teknis.</p>
-            <div class="social-links">
-                <button class="btn-login">About Me</button>
-            </div>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Raafi' <br><span>Rasyiid</span></h1>
+        <p>Spesialis WordPress Developer & Data Management dengan pengalaman di bidang IT Staff dan Sekretariat. Menggabungkan ketelitian data dengan keahlian teknis.</p>
+        <div class="social-links">
+            <button class="btn-about">About Me</button>
         </div>
-        <div class="hero-img">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="100" r="80" fill="#1B263B" stroke="#00B4D8" stroke-width="2"/>
-                <!-- <rect x="70" y="60" width="60" height="40" rx="5" fill="#00B4D8" />
-                <circle cx="85" cy="80" r="5" fill="#0D1B2A" />
-                <circle cx="115" cy="80" r="5" fill="#0D1B2A" />
-                <path d="M 80 120 Q 100 140 120 120" stroke="#00B4D8" fill="transparent" stroke-width="3"/> -->
-                <image href="assets/img/Raaf-Media-icon.png" x="60" y="60" width="80" height="80" />
-            </svg>
-        </div>
-    </section>
+    </div>
 
-    <section class="services">
-        <div class="card"><i>&#123;..&#125;</i><h3>Web Dev</h3><p>WordPress & Custom Code</p></div>
-        <div class="card"><i>🖳</i><h3>IT Support</h3><p>Hardware & Network</p></div>
-        <div class="card"><i>🗐</i><h3>Data Entry</h3><p>Fast & Accurate</p></div>
-        <div class="card"><i>🖂</i><h3>Secretariat</h3><p>Admin & Management</p></div>
-    </section>
+    <div class="hero-img-container">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="svg-logo">
+            <defs>
+                <filter id="glow">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
 
-    <section class="skills-container">
-        <div class="profile-card">
-            <img src="https://via.placeholder.com/150" alt="Profile" class="profile-img">
-            <h3>Raafi'</h3>
-            <p style="color: var(--cyan-accent);">IT Specialist</p>
-        </div>
-        <div class="skill-bars">
-            <div class="bar-item">
-                <div class="bar-label"><span>WordPress / HTML</span><span>90%</span></div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
-            </div>
-            <div class="bar-item">
-                <div class="bar-label"><span>Data Entry / Excel</span><span>95%</span></div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 95%;"></div></div>
-            </div>
-            <div class="bar-item">
-                <div class="bar-label"><span>IT Troubleshooting</span><span>85%</span></div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 85%;"></div></div>
-            </div>
-        </div>
-    </section>
+            <circle cx="100" cy="100" r="90" fill="transparent" stroke="var(--cyan-accent)" stroke-width="1" stroke-dasharray="10 5" opacity="0.5"/>
+            <circle cx="100" cy="100" r="82" fill="var(--navy-main)" stroke="var(--cyan-accent)" stroke-width="3" style="filter: drop-shadow(0 0 10px var(--cyan-accent));"/>
 
-    <script>
-        // Efek scroll sederhana buat navbar
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            header.style.background = window.scrollY > 50 ? 'rgba(13, 27, 42, 0.95)' : 'transparent';
-        });
-    </script>
-</body>
-</html>
+            <image 
+                href="assets/img/Raaf-Media-icon.png" 
+                x="35" 
+                y="35" 
+                width="130" 
+                height="130" 
+                class="logo-img"
+            />
+        </svg>
+    </div>
+</section>
