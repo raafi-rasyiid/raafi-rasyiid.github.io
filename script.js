@@ -1,52 +1,27 @@
-// Page Navigation
-const links = document.querySelectorAll("nav a");
-const pages = document.querySelectorAll(".page");
+// 1. Efek Navbar pas di-scroll
+const header = document.getElementById('main-header');
 
-links.forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-    const targetPage = link.getAttribute("data-page");
-
-    // Hide all pages
-    pages.forEach(page => page.classList.remove("active"));
-    links.forEach(link => link.classList.remove("active-link"));
-
-    // Show target page
-    // document.getElementById(targetPage).classList.add("active");
-    // link.classList.add("active-link");
-    const targetElement = document.getElementById(targetPage);
-    targetElement.classList.add("active");
-    link.classList.add("active-link");
-
-     // Jika klik ABOUT, fetch kontennya jika belum dimuat
-     if (targetPage === 'about-contact' && !targetElement.hasChildNodes()) {
-      fetch('about-contact.html')
-        .then(res => res.text())
-        .then(data => {
-          targetElement.innerHTML = data;
-        })
-        .catch(err => console.error('Gagal memuat contact.html', err));
+window.onscroll = () => {
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
     }
-  });
+};
+
+// 2. Logika Sederhana buat nyapa di Console (Style IT Staff banget)
+console.log("%c Portfolio Raafi' Rasyiid - Mode Dev Aktif! ", "background: #1B263B; color: #00B4D8; font-weight: bold;");
+
+// 3. Smooth Scroll buat menu
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        window.scrollTo({
+            top: targetElement.offsetTop - 70,
+            behavior: 'smooth'
+        });
+    });
 });
-
-// Theme Toggle
-const themeToggle = document.getElementById("toggle-theme");
-let isDark = false;
-
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  isDark = !isDark;
-  themeToggle.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
-});
-
-// Show Hijri Date
-function showHijriDate() {
-  const masehi = moment().format('dddd, D MMMM YYYY');
-  const hijri = moment().format('iD iMMMM iYYYY');
-  document.getElementById('masehiDate').textContent = `${masehi}`;
-  document.getElementById('hijriDate').textContent = `${hijri}`;
-}
-
-
-showHijriDate();
