@@ -1,4 +1,27 @@
-<section class="hero">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Portofolio - Trusted Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <header>
+        <div class="logo">A. Dev</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Skills</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+        <a href="#" class="btn-login">LOGIN</a>
+    </header>
+
+    <section class="hero">
     <div class="hero-text">
         <h1>Raafi' <br><span>Rasyiid</span></h1>
         <p>Spesialis WordPress Developer & Data Management dengan pengalaman di bidang IT Staff dan Sekretariat. Menggabungkan ketelitian data dengan keahlian teknis.</p>
@@ -33,3 +56,42 @@
         </svg>
     </div>
 </section>
+
+    <section class="services">
+        <div class="card"><i>&#123;..&#125;</i><h3>Web Dev</h3><p>WordPress & Custom Code</p></div>
+        <div class="card"><i>🖳</i><h3>IT Support</h3><p>Hardware & Network</p></div>
+        <div class="card"><i>🗐</i><h3>Data Entry</h3><p>Fast & Accurate</p></div>
+        <div class="card"><i>🖂</i><h3>Secretariat</h3><p>Admin & Management</p></div>
+    </section>
+
+    <section class="skills-container">
+        <div class="profile-card">
+            <img src="https://via.placeholder.com/150" alt="Profile" class="profile-img">
+            <h3>Raafi'</h3>
+            <p style="color: var(--cyan-accent);">IT Specialist</p>
+        </div>
+        <div class="skill-bars">
+            <div class="bar-item">
+                <div class="bar-label"><span>WordPress / HTML</span><span>90%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label"><span>Data Entry / Excel</span><span>95%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 95%;"></div></div>
+            </div>
+            <div class="bar-item">
+                <div class="bar-label"><span>IT Troubleshooting</span><span>85%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 85%;"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Efek scroll sederhana buat navbar
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.style.background = window.scrollY > 50 ? 'rgba(13, 27, 42, 0.95)' : 'transparent';
+        });
+    </script>
+</body>
+</html>
