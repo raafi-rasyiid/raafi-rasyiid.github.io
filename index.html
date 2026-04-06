@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Portofolio - Trusted Tech</title>
+    <title>Portfolio Raafi' - Raaf Media</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-    
 </head>
 <body>
-
-    <header>
+    <header id="main-header">
         <div class="logo">Raaf-Media</div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Skills</a>
+            <a href="https://raafi-rasyiid.github.io/">Home</a> <!-- Fixed typo: gihub → github -->
+            <a href="#skills-container">Skills</a>
             <a href="#">Portfolio</a>
             <a href="#">Contact</a>
         </nav>
@@ -22,49 +20,82 @@
     </header>
 
     <section class="hero">
-    <div class="hero-text">
-        <h1>Raafi' <br><span>Rasyiid</span></h1>
-        <p>Spesialis WordPress Developer & Data Management dengan pengalaman di bidang IT Staff dan Sekretariat. Menggabungkan ketelitian data dengan keahlian teknis.</p>
-        <div class="social-links">
-            <button class="btn-about">About Me</button>
+        <div class="hero-left">
+            <h1 class="main-name">
+                <span class="first-name">Raafi'</span>
+                <span id="moving-name">Rasyiid</span>
+                <span id="hidden-name">Ibrahim</span>
+            </h1>
+
+            <div id="desc-container" class="desc-wrapper collapsed">
+                <p class="desc-content">
+                    <span id="text-short" class="desc-short">WordPress Developer & Data Management Specialist with experience in IT Staff and Secretariat. Combining data accuracy with technical expertise.</span>
+                    <span id="text-more" class="desc-long"> I am a WordPress-focused web developer and administrative professional with over 5 years of experience supporting nonprofit organizations. I specialize in building and managing CMS-based websites, particularly using WordPress, including landing page development, website maintenance, and basic front-end implementation.
+
+                    In addition to my technical background, I have strong experience in administrative and data operations such as data entry, reporting, SOP documentation, and digital archiving. I am highly detail-oriented, reliable, and experienced in handling structured data workflows with accuracy and professionalism.
+
+                    I combine technical skills and operational understanding to create efficient, well-managed digital systems that support organizational goals.</span>
+                </p>
+            </div>
+
+            <div class="social-links">
+                <button id="toggle-about" class="btn-about">About Me</button>
+            </div>
         </div>
-    </div>
 
-    <div class="hero-img-container">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="svg-logo">
-            <defs>
-                <filter id="glow">
-                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                    <feMerge>
-                        <feMergeNode in="coloredBlur"/>
-                        <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                </filter>
-            </defs>
-
-            <circle cx="100" cy="100" r="90" fill="transparent" stroke="var(--cyan-accent)" stroke-width="1" stroke-dasharray="10 5" opacity="0.5"/>
-            <circle cx="100" cy="100" r="82" fill="var(--navy-main)" stroke="var(--cyan-accent)" stroke-width="3" style="filter: drop-shadow(0 0 10px var(--cyan-accent));"/>
-
-            <image 
-                href="assets/img/Raaf-Media-icon.png" 
-                x="35" 
-                y="35" 
-                width="130" 
-                height="130" 
-                class="logo-img"
-            />
-        </svg>
-    </div>
-</section>
-
-    <section class="services">
-        <div class="card"><i>&#123;..&#125;</i><h3>Web Dev</h3><p>WordPress & Custom Code</p></div>
-        <div class="card"><i>🖳</i><h3>IT Support</h3><p>Hardware & Network</p></div>
-        <div class="card"><i>🗐</i><h3>Data Entry</h3><p>Fast & Accurate</p></div>
-        <div class="card"><i>🖂</i><h3>Secretariat</h3><p>Admin & Management</p></div>
+        <div class="hero-img-container">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="svg-logo">
+                <defs>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                <image 
+                    href="assets/img/Raaf-Media-icon.png" 
+                    x="35" 
+                    y="35" 
+                    width="130" 
+                    height="130" 
+                    class="logo-img"
+                />
+            </svg>
+        </div>
     </section>
 
-    <section class="skills-container">
+    <!-- Fixed sticky section - ditambahkan class dan positioning -->
+    <section class="sticky-section">
+        <div class="sticky-container">
+            <div class="card-sticky">
+                <h2>Client-Ready Templates</h2>
+                <p>Skip the design grind...</p>
+            </div>
+            <div class="card-sticky">
+                <h2>World's Most Popular Theme</h2>
+                <p>Astra Pro is built for speed...</p>
+            </div>
+            <div class="card-sticky">
+                <h2>Faster Page Building</h2>
+                <p>Get advanced widgets...</p>
+            </div>
+            <div class="card-sticky">
+                <h2>Automate Tasks</h2>
+                <p>OttoKit handles busywork...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="card"><span>&#123;..&#125;</span><h3>Web Dev</h3><p>WordPress With Elementor</p></div>
+        <div class="card"><span>🖳</span><h3>IT Support</h3><p>Hardware & Network</p></div>
+        <div class="card"><span>🗐</span><h3>Data Entry</h3><p>Fast & Accurate</p></div>
+        <div class="card"><span>🖂</span><h3>Secretariat</h3><p>Admin & Management</p></div>
+    </section>
+
+    <section id="skills-container" class="skills-container">
         <div class="profile-card">
             <img src="https://via.placeholder.com/150" alt="Profile" class="profile-img">
             <h3>Raafi'</h3>
@@ -85,6 +116,7 @@
             </div>
         </div>
     </section>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
